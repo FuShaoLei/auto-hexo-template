@@ -1,7 +1,11 @@
-
 site:
   title: Sorryfu Blog
   description: 这个人很懒，什么也没留下
   create_post: https://github.com/FuShaoLei/auto-blog/new/master/source/_posts #创建新文章时用到
   foot: Theme by [Slate](https://github.com/FuShaoLei/hexo-theme-slate) Power by [Hexo](https://hexo.io/)
+
+menu:
+  主页: /
+  友链: /friend
+  开往: https://travellings.now.sh/
 

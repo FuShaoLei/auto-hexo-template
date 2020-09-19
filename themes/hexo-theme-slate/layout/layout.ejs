@@ -33,9 +33,24 @@ pageTitle += ' [ ' + config.title + ' ]';
               <% }%>
           </a>
         </h1>
-        <% if(is_home() == true) {%>
-          <h2 id="project_tagline"><%=theme.site.description%></h2>
-        <% } %>
+          <h2 id="project_tagline_smaller">
+            <% if(is_home() == true ) {%>
+            <%=theme.site.description%>
+            <% } else { %>
+              <%=full_date(page.date,'MMM DD YYYY') %>
+            <% } %>
+          </h2>
+          <h2 id="project_tagline">
+            <ul class="menu-ul">
+            <% Object.keys(theme.menu).forEach(key => { %>
+              <a href="<%=url_for(theme.menu[key])%>" class="nav-link">
+                <li class="menu-li">
+                  <%=key%>
+                </li>
+              </a>
+            <% }); %>              
+            </ul>
+          </h2>
       </header>
   </div>
 

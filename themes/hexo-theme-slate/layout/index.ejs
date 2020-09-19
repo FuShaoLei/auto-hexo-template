@@ -3,6 +3,7 @@
 <% site.posts.each(post => { %>
     <li>
         <h5>
+            <%=full_date(post.date,'MM/DD') %>
             <a  href="<%=url_for(post.path)%>">
                 <%= post.title %>
             </a>

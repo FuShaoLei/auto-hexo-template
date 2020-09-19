@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6
   font-weight: 700
   color: #222222
   font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif
-  letter-spacing: -1px
+  letter-spacing: .3px
 h1
   font-size: 36px
   font-weight: 700
@@ -89,7 +89,7 @@ strong
 img
   position: relative
   margin: 0 auto
-  max-width: 739px
+  max-width: 100%
   padding: 5px
   margin: 10px 0 10px 0
   border: 1px solid #ebebeb
@@ -152,6 +152,7 @@ hr
   margin-bottom: 5px
   border: none
 table
+  width: 100%
   border: 1px solid #373737
   margin-bottom: 20px
   text-align: left
@@ -210,10 +211,26 @@ Full-Width Styles
       text-decoration: none
 #project_tagline
   color: #fff
-  font-size: 24px
+  font-size: 18px
   font-weight: 300
   background: none
   text-shadow: #111 0px 0px 10px
+#project_tagline_smaller
+  color: #fff
+  font-size: 16px
+  font-weight: 300
+  background: none
+  text-shadow: #111 0px 0px 10px
+.menu-ul
+  list-style none
+  margin: 0
+  padding: 0
+  a
+    &:hover
+      text-decoration: none
+.menu-li
+  float left
+  margin-right 20px
 #main_content_wrap
   background: #f2f2f2
   border-top: 1px solid #111
