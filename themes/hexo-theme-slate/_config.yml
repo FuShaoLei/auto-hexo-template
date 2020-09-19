@@ -1,0 +1,7 @@
+
+site:
+  title: Sorryfu Blog
+  description: 这个人很懒，什么也没留下
+  create_post: / #创建新文章时用到
+  foot: Theme by [Slate]() Power by Hexo Host in GitHub Pages
+

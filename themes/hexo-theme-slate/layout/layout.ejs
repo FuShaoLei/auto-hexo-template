@@ -1,0 +1,58 @@
+
+<%
+var pageTitle = page.title || config.subtitle || '';
+if (is_archive()) pageTitle = 'Archives';
+if (is_tag()) pageTitle = 'Tag: ' + page.tag;
+if (is_category()) pageTitle = 'Category: ' + page.category;
+if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
+if (is_year()) pageTitle += ': ' + page.year;
+pageTitle += ' [ ' + config.title + ' ]';
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%=pageTitle%></title>
+  <!-- css -->
+  <%- css('css/slate') %>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        <a id="forkme_banner" href="<%= theme.site.create_post%>">Create Post</a>
+        <h1 id="project_title">
+          <a href="/">
+            <% if(is_home() == true || page.title==undefined) {%>
+              <%=theme.site.title%>
+              <% }else { %>
+                <%=page.title%>
+              <% }%>
+          </a>
+        </h1>
+        <% if(is_home() == true) {%>
+          <h2 id="project_tagline"><%=theme.site.description%></h2>
+        <% } %>
+      </header>
+  </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <%- body %>
+      </section>
+    </div>
+
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p><%- markdown(theme.site.foot) %></p>
+      </footer>
+    </div>
+
+</body>
+</html>
