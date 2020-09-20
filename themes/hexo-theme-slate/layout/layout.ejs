@@ -17,13 +17,29 @@ pageTitle += ' [ ' + config.title + ' ]';
   <title><%=pageTitle%></title>
   <!-- css -->
   <%- css('css/slate') %>
+  <!-- 代码高亮 -->
+  <% if (config.highlight.enable != true) { %>
+    <% if (theme.plugins.highlightjs && theme.plugins.highlightjs.css) { %>
+      <%- css(theme.plugins.highlightjs.css) %>
+    <% } %>
+  <% } %>
 </head>
 <body>
+  <%
+  function trimNumber(str){
+    return str.replace(/\d+/g,'').replace(/\//g,'');
+  }
+  %>
 
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
       <header class="inner">
+        <% if(is_home() == true){ %>
         <a id="forkme_banner" href="<%= theme.site.create_post%>">Create Post</a>
+        <% } %>
+        <% if(is_post() == true){ %>
+          <a id="forkme_banner" href="<%= theme.site.edit_post%><%=trimNumber(page.path)%>.md">Edit Post</a>
+        <% } %>
         <h1 id="project_title">
           <a href="/">
             <% if(is_home() == true || page.title==undefined) {%>
@@ -68,6 +84,11 @@ pageTitle += ' [ ' + config.title + ' ]';
         <p><%- markdown(theme.site.foot) %></p>
       </footer>
     </div>
-
+    <% if (config.highlight.enable != true) { %>
+      <% if (theme.plugins.highlightjs && theme.plugins.highlightjs.js) { %>
+        <%- js(theme.plugins.highlightjs.js) %>
+        <script>hljs.initHighlightingOnLoad();</script>
+      <% } %>
+    <% } %>
 </body>
 </html>
