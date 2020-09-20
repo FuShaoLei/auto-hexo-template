@@ -1,5 +1,5 @@
 ---
-title: github action + hexo 实现在线写博客
+title: GitHub Action + Hexo实现在线写作
 ---
 
 ## 零，前言 
