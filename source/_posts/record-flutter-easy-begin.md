@@ -55,8 +55,8 @@ tags:
 
 ![](https://cdn.jsdelivr.net/gh/fushaolei/img2/20200717172240.png)
 
-允许到手机上看看
+运行到手机上看看
 
-<img src="https://cdn.jsdelivr.net/gh/fushaolei/img2/20200717173912.jpg"  width="20">
+![](https://cdn.jsdelivr.net/gh/fushaolei/img2/20200717173912.jpg)
 
 如果出现这个页面（默认的） ，就说明 我们大功告成啦~~
