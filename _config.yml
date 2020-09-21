@@ -104,5 +104,5 @@ theme: hexo-theme-slate
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:FuShaoLei/FuShaoLei.github.io.git
+  repository: git@github.com:<你的用户名>/<部署hexo的仓库名>.git
   branch: master
