@@ -8,7 +8,7 @@ cover: https://api.ixiaowai.cn/gqapi/gqapi.php
 
 ## 友链
 
-> 有的是单链 有的是双链 ~
+> 有的是单链 有的是双链 ~，这里面有些链接可能已经挂了，但是我并不想把他们删掉，算是留个念想吧
 
 Link | Intro
 --|--
