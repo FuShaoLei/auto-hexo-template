@@ -1,9 +1,9 @@
 <div class="index-body">
 <ul>
-<% site.posts.each(post => { %>
+<% site.posts.sort('date', -1).each(post => { %>
     <li>
         <h5>
-            <%=full_date(post.date,'MM/DD') %>
+            <%=full_date(post.date,'YYYY/MM/DD') %>
             <a  href="<%=url_for(post.path)%>">
                 <%= post.title %>
             </a>

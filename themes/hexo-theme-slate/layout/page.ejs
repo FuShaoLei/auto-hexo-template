@@ -1,9 +1,15 @@
 
 <article id="page">
-  <h1><%=page.title%></h1>
   <%-page.content%>
+  <!-- 评论 -->
+  <% if (page.comments !== false && theme.comments.open === true){ %>
+    <div class="bottom-comments-outer">
+      <div class="bottom-comments-inner">
+        <!-- Gitalk -->
+        <% if ( theme.comments.system ==='gitalk' && theme.comments.gitalk && theme.comments.gitalk.clientID && theme.comments.gitalk.clientSecret ){ %>
+          <%- partial('post/comment-gitalk') %>
+        <% } %>
+        </div>
+      </div>
+    <% } %>
 </article>
-
-<div id="paginator">
-  <%-paginator()%>
-</div>
