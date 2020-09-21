@@ -178,8 +178,13 @@ function trimNumber(str){
 这样一来，当你新增或修改文章并点击那个`git commit`后，都会出发github action，然后它就会帮你进行hexo三连，也就是自动部署啦
 
 
+## 三，后记
+如果你按照以上的步骤一一做完后，你就可以得到一个可以在线编辑的hexo网站了，这其中当然也有些缺点咯，比如下面两个
 
-## 参考文章
+- 修改完后触发编译，需要等待一段时间（其实这属于鸡蛋里挑骨头了hhhh
+- 想要上传图片的时候有一些不方便
+
+#### 参考文章
 
 - [利用GitHub+Actions自动部署Hexo博客](https://blog.csdn.net/u012208219/article/details/106883054?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522160061139819195188346686%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=160061139819195188346686&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v3-1-106883054.pc_ecpm_v3_pc_rank_v3&utm_term=github+action+%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2hexo&spm=1018.2118.3001.4187)
 
